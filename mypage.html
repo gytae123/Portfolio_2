@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <link rel="stylesheet" href="./css/h_f.css">
+    <link rel="stylesheet" href="./css/mypage.css">
+    <link rel="icon" href="./img/DM_tab_logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header_cover">
+        <header class="headera">
+            <div class="message active">전 상품 무료 배송</div>
+            <div class="message next">환영합니다. Mr. Marten's 홈페이지입니다.</div>
+            <div class="message prev">신규 가입 10% 혜택</div>
+        </header>
+        <header class="headerb">
+            <div class="logo">
+                <a href="./index.html"><img src="./img/DM_Logo.png" alt="Dr. Martens Logo"></a>
+            </div>
+            <div class="menu">
+                <div class="dropdown">
+                    <a href="./category.html">여성</a>
+                    <div class="dropdown-content">
+                        <a href="./category.html">Narrow</a>
+                        <a href="./category.html">Medium</a>
+                        <a href="./category.html">Wide</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="./category.html">남성</a>
+                    <div class="dropdown-content">
+                        <a href="./category.html">Narrow</a>
+                        <a href="./category.html">Medium</a>
+                        <a href="./category.html">Wide</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="./category.html">공용</a>
+                    <div class="dropdown-content">
+                        <a href="./category.html">Narrow</a>
+                        <a href="./category.html">Medium</a>
+                        <a href="./category.html">Wide</a>
+                    </div>
+                </div>
+                <a href="./category.html" class="sale">SALE</a>
+                <a href="./category.html" class="new-in">NEW IN</a>
+                <a href="./category.html">BEST</a>
+            </div>
+            <div class="right-menu">
+                <a href="./login_signup.html">로그인/회원가입</a>
+                <a href="./cart.html">장바구니</a>
+                <a href="./mypage.html" class="mypage">마이페이지<img src="./img/mypage_icons/Icon_mypage.png" alt="My Page Icon"></a>
+                <div class="search">
+                    <input type="text" placeholder="Search...">
+                    <button>검색</button>
+                </div>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </header>
+    </header>
+
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <div class="side-menu" id="sideMenu">
+        <div class="search">
+            <input type="text" placeholder="Search...">
+            <button>검색</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="<c:url value='/'/>">여성</a></li>
+                <li><a href="<c:url value='/'/>">남성</a></li>
+                <li><a href="<c:url value='/'/>">액세서리</a></li>
+                <li><a href="<c:url value='/'/>">SALE</a></li>
+                <li><a href="<c:url value='/'/>">NEW IN</a></li>
+                <li><a href="<c:url value='/'/>">BEST</a></li>
+                <li class="divider"></li>
+                <li><a href="<c:url value='/'/>">로그인/회원가입</a></li>
+                <li><a href="<c:url value='/'/>">장바구니</a></li>
+                <li><a href="<c:url value='/'/>">마이페이지</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="container">
+        <header class="header">
+            <h1>MY PAGE</h1>
+        </header>
+
+        <div class="content">
+            <aside class="sidebar">
+                <nav>
+                    <div class="my_shopping">
+                    <h2>나의 쇼핑</h2>
+                    <ul>
+                        <li>주문/배송</li>
+                        <li>취소/환불</li>
+                        <li>최근 본 상품</li>
+                        <li>배송 주소록</li>
+                    </ul>
+                    </div>
+                    <div class="my_activity">
+                    <h2>나의 활동</h2>
+                    <ul>
+                        <li>1:1문의</li>
+                        <li>상품문의</li>
+                        <li>상품후기</li>
+                    </ul>
+                    </div>
+                    <div class="my_info">
+                    <h2>나의 정보</h2>
+                    <ul>
+                        <li>회원정보 수정</li>
+                    </ul>
+                    </div>
+                </nav>
+            </aside>
+
+            <main class="main-content">
+                <section class="welcome-section">
+                    <h2>홍길동님, 환영합니다.</h2>
+                    <div class="coupons">
+                        <div class="coupon-item">
+                            <img src="./img/mypage_icons/mypage_coupon.png" alt="쿠폰 아이콘">
+                            <span>0장</span>
+                        </div>
+                        <div class="recent-item">
+                            <img src="./img/mypage_icons/mypage_recents.png" alt="최근 본 상품 아이콘">
+                            <span>0개</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="order-history">
+                    <h3>최근 주문 내역</h3>
+                    <div class="order-steps">
+                        <div class="step">
+                            <img src="./img/mypage_icons/mypage_order_1.png" alt="주문 접수 아이콘">
+                            <p>주문접수</p>
+                        </div>
+                        <img src="./img/mypage_icons/mypage_order_array.png" alt="화살표 아이콘" class="arrow">
+                        <div class="step">
+                            <img src="./img/mypage_icons/mypage_order_2.png" alt="결제 확인 아이콘">
+                            <p>결제확인</p>
+                        </div>
+                        <img src="./img/mypage_icons/mypage_order_array.png" alt="화살표 아이콘" class="arrow">
+                        <div class="step">
+                            <img src="./img/mypage_icons/mypage_order_3.png" alt="상품 준비중 아이콘">
+                            <p>상품준비중</p>
+                        </div>
+                        <img src="./img/mypage_icons/mypage_order_array.png" alt="화살표 아이콘" class="arrow">
+                        <div class="step">
+                            <img src="./img/mypage_icons/mypage_order_4.png" alt="배송중 아이콘">
+                            <p>배송중</p>
+                        </div>
+                        <img src="./img/mypage_icons/mypage_order_array.png" alt="화살표 아이콘" class="arrow">
+                        <div class="step">
+                            <img src="./img/mypage_icons/mypage_order_5.png" alt="배송 완료 아이콘">
+                            <p>배송완료</p>
+                        </div>
+                    </div>
+                    <p class="no-history">최근 1개월 내역이 없습니다.</p>
+                </section>
+
+                <section class="cancel-refund">
+                    <h3>취소/환불</h3>
+                    <p>최근 1개월 내역이 없습니다.</p>
+                </section>
+            </main>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-top">
+            <a>이용약관</a>
+            <a>개인정보처리방침</a>
+            <a>CONTACT</a>
+            <a>사이트맵</a>
+        </div>
+        <div class="footer-medium">
+            <div class="left">
+                <p>닥터마틴에어웨어코리아(주)</p>
+                <p>서울특별시 강남구 도산대로 318 (SBE타워) 14층 12호</p>
+                <p>사업자번호: 123-45-67890 [사업자정보확인]</p>
+                <p>통신판매업신고: 2024-서울아01234호</p>
+                <p>개인정보관리책임자: 홍길동</p>
+                <p>대표이사: 홍길동/Kill-Dong Hong</p>
+                <p>이메일: gytae123@gmail.com</p>
+                <p>팩스: 050-1234-5678</p>
+            </div>
+            <div class="right">
+                <div class="social-icons">
+                    <a href="#"><img src="./img/footer_sns_icons/icon_sns_facebook 1.png"></a>
+                    <a href="#"><img src="./img/footer_sns_icons/icon_sns_instagram 1.png"></a>
+                    <a href="#"><img src="./img/footer_sns_icons/icon_sns_twitter 1.png"></a>
+                    <a href="#"><img src="./img/footer_sns_icons/icon_sns_youtube 1.png"></a>
+                </div>
+                <div class="contact">
+                    <p>고객센터: 1544-6486 (10AM - 5PM 점심시간: 12:00 - 13:00)</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>All Images and Contents Copyright © 2024 Dr.Martens-Airwair Korea. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="./js/mypage.js"></script>
+    <script src="./js/h_f.js"></script>
+</body>
+
+</html>

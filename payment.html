@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="./css/h_f.css">
+    <link rel="stylesheet" href="./css/payment.css">
+    <link rel="icon" href="./img/DM_tab_logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header_cover">
+        <header class="headera">
+            <div class="message active">전 상품 무료 배송</div>
+            <div class="message next">환영합니다. Mr. Marten's 홈페이지입니다.</div>
+            <div class="message prev">신규 가입 10% 혜택</div>
+        </header>
+        <header class="headerb">
+            <div class="logo">
+                <a href="./index.html"><img src="./img/DM_Logo.png" alt="Dr. Martens Logo"></a>
+            </div>
+            <div class="menu">
+                <div class="dropdown">
+                    <a href="./category.html">여성</a>
+                    <div class="dropdown-content">
+                        <a href="./category.html">Narrow</a>
+                        <a href="./category.html">Medium</a>
+                        <a href="./category.html">Wide</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="./category.html">남성</a>
+                    <div class="dropdown-content">
+                        <a href="./category.html">Narrow</a>
+                        <a href="./category.html">Medium</a>
+                        <a href="./category.html">Wide</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="./category.html">공용</a>
+                    <div class="dropdown-content">
+                        <a href="./category.html">Narrow</a>
+                        <a href="./category.html">Medium</a>
+                        <a href="./category.html">Wide</a>
+                    </div>
+                </div>
+                <a href="./category.html" class="sale">SALE</a>
+                <a href="./category.html" class="new-in">NEW IN</a>
+                <a href="./category.html">BEST</a>
+            </div>
+            <div class="right-menu">
+                <a href="./login_signup.html">로그인/회원가입</a>
+                <a href="./cart.html">장바구니</a>
+                <a href="./mypage.html" class="mypage">마이페이지<img src="./img/mypage_icons/Icon_mypage.png" alt="My Page Icon"></a>
+                <div class="search">
+                    <input type="text" placeholder="Search...">
+                    <button>검색</button>
+                </div>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </header>
+    </header>
+
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+    <div class="side-menu" id="sideMenu">
+        <div class="search">
+            <input type="text" placeholder="Search...">
+            <button>검색</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">여성</a></li>
+                <li><a href="#">남성</a></li>
+                <li><a href="#">액세서리</a></li>
+                <li><a href="#">SALE</a></li>
+                <li><a href="#">NEW IN</a></li>
+                <li><a href="#">BEST</a></li>
+                <li class="divider"></li>
+                <li><a href="#">로그인/회원가입</a></li>
+                <li><a href="#">장바구니</a></li>
+                <li><a href="#">마이페이지</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <div class="payment_txt">
+            <span>주문/결제</span>
+        </div>
+        <div class="content_area">
+            <div class="payment_L">
+                <div class="payment_item_info"><span>주문상품 정보</span></div>
+                <div class="payment_item_box">
+                    <div class="payment_item_box_L">
+                        <div class="item_box">
+                            <img src="./img/1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="payment_item_box_R">
+                        <div class="item_info item_name"><span>1461 벡스</span></div>
+                        <div class="item_info item_size"><span>사이즈(mm) : </span> 280</div>
+                        <div class="item_info item_qty"><span>수량 : </span> 1개</div>
+                        <div class="item_info item_price">₩230,000</div>
+                    </div>
+                </div>
+                <div class="user_info">
+                    <div class="user_info_txt">
+                        <span>주문자 정보</span>
+                    </div>
+                    <div class="user_info_area">
+                        <form>
+                            <div class="user-box">
+                                <input type="text" id="username" name="username" required />
+                                <label for="username">이름</label>
+                            </div>
+                            <div class="user-box">
+                                <input type="text" id="user_tel" name="user_tel" required />
+                                <label for="user_tel">연락처</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="address_info">
+                    <div class="address_info_txt">
+                        <span>배송지 정보</span>
+                    </div>
+                    <div class="address_info_area">
+                        <form>
+                            <div class="user-box">
+                                <input type="text" id="receiver" name="receiver" required />
+                                <label for="receiver">받는 분</label>
+                            </div>
+                            <div class="user-box">
+                                <input type="text" id="post_num" name="post_num" required />
+                                <label for="post_num">우편번호</label>
+                            </div>
+                            <div class="user-box">
+                                <input type="text" id="address" name="address" required />
+                                <label for="address">주소</label>
+                            </div>
+                            <div class="user-box" id="phonebox">
+                                <input type="tel" id="phone" name="phone" required />
+                                <label for="phone">전화번호</label>
+                            </div>
+                            <div class="address_chk_box">
+                                <input type="checkbox" id="add_chk_1"><label for="add_chk_1">
+                                    <span>기본 배송지로 저장</span>
+                            </div>
+                            <div class="user-box">
+                                <input type="text" id="add_msg" name="add_msg" required />
+                                <label for="add_msg">배송 시 요청사항</label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="payment_method">
+                    <div class="address_info_txt payment_method">
+                        <span>결제 수단</span>
+                    </div>
+                    <div class="payment_method_area">
+                        <a href="#"><input type="radio" id="creditcard" value="신용카드" class="p_methods"></a>
+                        <label for="creditcard">신용카드</label>
+                        <a href="#"><input type="radio" id="kakaopay" value="카카오페이" class="p_methods"></a>
+                        <label for="kakaopay">카카오페이</label>
+                        <a href="#"><input type="radio" id="directpay" value="계좌이체" class="p_methods"></a>
+                        <label for="directpay">계좌이체</label>
+                    </div>
+                </div>
+            </div>
+            <div class="payment_R">
+                <div class="order_price">
+                    <div class="order_price_txt">
+                        <span>주문 예정 금액</span>
+                    </div>
+                    <div class="order_price_detail">
+                        <div class="detail_txt total_price">
+                            <span>총 상품 금액</span>
+                            <span>₩230,000</span>
+                        </div>
+                        <div class="detail_txt delivery_price">
+                            <span>배송비</span>
+                            <span>₩(+)0</span>
+                        </div>
+                        <div class="detail_txt total_price2">
+                            <span>총 상품 금액</span>
+                            <span>₩230,000</span>
+                        </div>
+                    </div>
+                    <div class="order_agree">
+                        <span>약관 동의</span>
+                    </div>
+                    <div class="caution">
+                        <div class="chk_area all_agree">
+                            <input type="checkbox" id="rd1" name="checkAll">
+                            <label for="rd1">
+                                <span>전체동의</span>
+                            </label>
+                        </div>
+
+                        <div class="chk_area">
+                            <input type="checkbox" id="rd2" name="checkbox" required>
+                            <label for="rd2">
+                                <span>개인정보 제3자 제공 동의
+                                    (필수)</span>
+                            </label>
+                        </div>
+
+                        <div class="chk_area">
+                            <input type="checkbox" id="rd3" name="checkbox" required>
+                            <label for="rd3">
+                                <span>반품 시 결제금액에서 반품 왕복
+                                    배송비를 차감한 금액이 환불되는 것에
+                                    동의합니다. 네이버페이 및 비회원으로 구매 시
+                                    무료 교환 제외입니다.</span>
+                            </label>
+                        </div>
+
+                        <div class="chk_area">
+                            <input type="checkbox" id="rd4" name="checkbox" required>
+                            <label for="rd4">
+                                <span>교환/반품 시 신청 사유 동봉하여 발송해 주십시오.
+                                    내용 미 동봉 시 처리가 지연될 수 있습니다.</span>
+                            </label>
+                        </div>
+                        <input type="button" value="결제하기" class="payment_btn">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <a>이용약관</a>
+            <a>개인정보처리방침</a>
+            <a>CONTACT</a>
+            <a>사이트맵</a>
+        </div>
+        <div class="footer-medium">
+            <div class="left">
+                <p>닥터마틴에어웨어코리아(주)</p>
+                <p>서울특별시 강남구 도산대로 318 (SBE타워) 14층 12호</p>
+                <p>사업자번호: 123-45-67890 [사업자정보확인]</p>
+                <p>통신판매업신고: 2024-서울아01234호</p>
+                <p>개인정보관리책임자: 홍길동</p>
+                <p>대표이사: 홍길동/Kill-Dong Hong</p>
+                <p>이메일: gytae123@gmail.com</p>
+                <p>팩스: 050-1234-5678</p>
+            </div>
+            <div class="right">
+                <div class="social-icons">
+                    <a href="#"><img src="./img/footer_sns_icons/icon_sns_facebook 1.png"></a>
+                    <a href="#"><img src="./img/footer_sns_icons/icon_sns_instagram 1.png"></a>
+                    <a href="#"><img src="./img/footer_sns_icons/icon_sns_twitter 1.png"></a>
+                    <a href="#"><img src="./img/footer_sns_icons/icon_sns_youtube 1.png"></a>
+                </div>
+                <div class="contact">
+                    <p>고객센터: 1544-6486 (10AM - 5PM 점심시간: 12:00 - 13:00)</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>All Images and Contents Copyright © 2024 Dr.Martens-Airwair Korea. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="./js/payment.js"></script>
+    <script src="./js/h_f.js"></script>
+</body>
+
+</html>
